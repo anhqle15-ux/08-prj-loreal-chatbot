@@ -5,7 +5,7 @@ const chatWindow = document.getElementById("chatWindow");
 // Point this at your deployed Cloudflare Worker URL.
 // You can override it in the browser with window.WORKER_URL if needed.
 const WORKER_URL =
-  window.WORKER_URL || "https://loreal-chatbot.your-subdomain.workers.dev/";
+  window.WORKER_URL || "loreal-chatbot-worker.anhle15.workers.dev/";
 const MAX_MESSAGES = 15;
 const conversationMemory = {
   name: "",
