@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chat Assistant</title>
+    <title>L'Oréal Beauty Advisor</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -17,19 +17,40 @@
 
   <body>
     <div class="page-wrapper">
-      <!------- Header / Branding ------->
       <header class="site-header">
-        <h1 class="site-title">Smart Product Advisor</h1>
+        <div class="brand-block">
+          <img
+            src="img/loreal-logo.png"
+            alt="L'Oréal logo"
+            class="brand-logo"
+          />
+          <div class="brand-copy">
+            <p class="brand-eyebrow">L'Oréal Paris</p>
+            <h1 class="site-title">Smart Beauty Advisor</h1>
+          </div>
+        </div>
       </header>
 
-      <!------- Chat Area ------->
       <main>
         <section class="chatbox">
-          <div id="chatWindow" class="chat-window">
+          <div
+            id="chatWindow"
+            class="chat-window"
+            role="log"
+            aria-live="polite"
+          >
             <!-- messages will be appended here via JS -->
           </div>
 
           <form id="chatForm" class="chat-form">
+            <div
+              id="typingIndicator"
+              class="typing-indicator"
+              aria-live="polite"
+            >
+              <span class="spinner"></span>
+              <span>Assistant is typing</span>
+            </div>
             <label for="userInput" class="visually-hidden">Message</label>
             <input
               id="userInput"
@@ -38,6 +59,7 @@
               placeholder="Ask me about products or routines…"
               autocomplete="off"
               required
+              aria-label="Your beauty question"
             />
             <button type="submit" id="sendBtn">
               <span class="material-icons">send</span>
@@ -47,11 +69,9 @@
         </section>
       </main>
 
-      <!------- Footer Links ------->
       <footer class="site-footer">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
+        <p>© 2025 L'Oréal. Crafted for elegant beauty guidance.</p>
         <nav>
-          <!-- These URLs are placeholders -->
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Use</a>
           <a href="#">Contact</a>
